@@ -9,11 +9,14 @@ class SabiApp extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: Center(
-      child: Text("Hi my love Sabi",
-      style: TextStyle(color : Colors.red),
-      ),
-      ),
+      home:  Scaffold(appBar: AppBar(
+        
+        title: Text("Sabinaya",),),
+        body: Center(child: RaisedButton(
+          onPressed: null,
+          child: Text("Press me"),
+        ),
+      ),)
     );
   }
 
