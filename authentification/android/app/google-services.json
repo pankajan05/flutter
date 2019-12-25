@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "562236417340",
+    "firebase_url": "https://test-dbb2f.firebaseio.com",
+    "project_id": "test-dbb2f",
+    "storage_bucket": "test-dbb2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562236417340:android:4af54ed526d2591697aa39",
+        "android_client_info": {
+          "package_name": "om.example.authentification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562236417340-u9em3ltkji739leds6us5cu7djsrv29v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeCn-wOaEf0ZVneK-5Ld-yleZDJG2QT-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562236417340-u9em3ltkji739leds6us5cu7djsrv29v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

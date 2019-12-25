@@ -56,6 +56,7 @@ class MainStatefulWidget extends StatefulWidget {
 
 class MainStatefulWidgetState extends State {
   String count = '';
+  int c = 0;
   
   @override
   Widget build(BuildContext context) {
@@ -64,10 +65,12 @@ class MainStatefulWidgetState extends State {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Image.network('$count'),
-        Text('Number', style: TextStyle(fontSize: 50)),
+        Text('Number $c', style: TextStyle(fontSize: 50)),
         RaisedButton(
           onPressed: () {
+            
             setState(() {
+              c++;
             count = 'https://i.pinimg.com/280x280_RS/1c/53/d5/1c53d5b3502165cb8d49cfcb246b9e30.jpg'; 
             });
           },
