@@ -43,4 +43,22 @@ main(List<String> arguments) {
   list.forEach((element) {
     print(element);
   });
+
+  //maps
+  Map<String, int> ages = {
+    'pankajan' : 23,
+    'nayan' : 24,
+    'tharindu' : 28,
+  };
+
+  print(ages.keys);
+  print(ages.values);
+  print(ages['pankajan']);
+  print(ages.keys.elementAt(2));
+  ages.forEach((key, value) {
+    print('$key is $value years old!');
+  });
+
+  
 }
+
