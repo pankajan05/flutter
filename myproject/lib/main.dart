@@ -13,20 +13,41 @@ class MyApp extends StatelessWidget {
         title: Text("MyApp"),
         backgroundColor: Colors.red[600],
       ),
-      body:Center(
-        child: Text("Hello Welcome to myApp",
-            style: TextStyle(
+      body:SafeArea(
+        child: SingleChildScrollView(
+            child: Column(
+            children: <Widget>[
+              Container(
+                color: Colors.white, // Yellow
+                height: 50.0,
+              ),
+              Text("Hello Welcome to myApp",
+              style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
               letterSpacing: 2.0,
               color: Colors.grey[600],
               fontFamily: 'DancingScript',
-            )),
+              )),
+              Image(image: NetworkImage('https://www.publicdomainpictures.net/pictures/320000/nahled/background-image.png'),),
+              Container(
+                color: Colors.white, // Yellow
+                height: 50.0,
+              ),
+              Image(image: AssetImage('images/images.jpeg')),
+              Container(
+                color: Colors.white, // Yellow
+                height: 50.0,
+              ),
+              Image.asset("images/i.jpg"),
+
+              FloatingActionButton(
+                  onPressed: () {},
+                  child: Text("click"),
+                  backgroundColor: Colors.red[600],)
+            ])
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text("click"),
-        backgroundColor: Colors.red[600],
+
       ),
     );
   }
