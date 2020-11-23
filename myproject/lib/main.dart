@@ -40,6 +40,14 @@ class MyApp extends StatelessWidget {
                 height: 50.0,
               ),
               Image.asset("images/i.jpg"),
+              Container(
+                color: Colors.white, // Yellow
+                height: 50.0,
+              ),
+              Icon(
+                Icons.alarm,
+                color: Colors.red,
+              ),
 
               FloatingActionButton(
                   onPressed: () {},
@@ -47,6 +55,7 @@ class MyApp extends StatelessWidget {
                   backgroundColor: Colors.red[600],)
             ])
       ),
+        
 
       ),
     );
