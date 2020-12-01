@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'QuoteCard.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -20,33 +21,6 @@ class _QuoteListState extends State<QuoteList> {
     Quote(author:'kunfu panda', text:'Yesterday is past, Tomorrow is future, Today is gift that is why we call it present')
   ];
 
-  Widget quoteTemplate(quote){
-    return Card(
-      margin: EdgeInsets.fromLTRB(16, 16, 16, 0),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Text(
-              quote.text,
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.grey[500],
-              ),
-            ),
-            SizedBox(height: 6),
-            Text(quote.author,
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.grey[800],
-            ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +33,11 @@ class _QuoteListState extends State<QuoteList> {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: quotes.map((quote) => quoteTemplate(quote)).toList(),
+        children: quotes.map((quote) => QuoteCard(quote: quote)).toList(),
       ),
     );
   }
 }
+
+
 
