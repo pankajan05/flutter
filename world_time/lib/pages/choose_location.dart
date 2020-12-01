@@ -7,7 +7,7 @@ class ChooseLocation extends StatefulWidget {
 
 class _ChooseLocationState extends State<ChooseLocation> {
 
-  void getData() async{
+/*  void getData() async{
     //simulate network request for username
     String usrname = await Future.delayed(Duration(seconds: 10), () {
       return 'kajan';
@@ -17,12 +17,12 @@ class _ChooseLocationState extends State<ChooseLocation> {
       return 'sabi';
     });
     print('$usrname -> $bio');
-  }
+  }*/
 
   @override
   void initState() {
     super.initState();
-    getData();
+    //getData();
     print('init state function');
   }
 
