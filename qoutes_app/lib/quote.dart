@@ -1,9 +1,8 @@
+// Quote myquote = Quote(author:'kajan' , text: 'Life is beautiful');
+
 class Quote {
   String text;
   String author;
 
-  Quote(String text, String author){
-    this.text = text;
-    this.author = author;
-  }
+  Quote({this.text, this.author});
 }
