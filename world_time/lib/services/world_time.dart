@@ -1,5 +1,6 @@
 import 'package:http/http.dart';
 import 'dart:convert';
+import 'package:intl/intl.dart';
 
 class WorldTime{
    String location;
@@ -21,7 +22,7 @@ class WorldTime{
         DateTime now = DateTime.parse(datetime);
         now.add(Duration(hours: int.parse(offset.substring(1, 3)),
             minutes: int.parse(offset.substring(4, 6))));
-        this.time = now.toString();
+        this.time = DateFormat.jm().format(now);
      } catch (e){
         print("There is a loading error.");
         this.time = "Data is not received.";
