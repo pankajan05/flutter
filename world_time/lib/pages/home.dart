@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
       body: SafeArea(child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(data['isDaytime']),
+            image: AssetImage(data['isDaytime'] == null ? 'image/day.png':data['isDaytime']  ),
             fit: BoxFit.cover,
           ),
         ),
