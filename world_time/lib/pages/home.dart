@@ -11,39 +11,53 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     data = ModalRoute.of(context).settings.arguments;
-    print(data);
-    return Scaffold(
-      body: SafeArea(child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 120, 0, 0),
-        child: Column(
-          children: [
-            FlatButton.icon(onPressed: (){
-              Navigator.pushNamed(context, '/location');
-            },
-                icon: Icon(Icons.edit_location),
-                label: Text('Edit location')),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  data['location'],
-                  style: TextStyle(
-                    fontSize: 28,
-                    letterSpacing: 2
-                  ),
-                ),
+    Color bgColor = data['isDaytime'] == 'image/day.png' ? Colors.blue : Colors.indigo;
 
-              ],
-            ),
-            SizedBox(height: 20,),
-            Text(
-              data['time'],
-              style: TextStyle(
-                fontSize: 66,
+    return Scaffold(
+      backgroundColor: bgColor,
+      body: SafeArea(child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(data['isDaytime']),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(0, 120, 0, 0),
+          child: Column(
+            children: [
+              FlatButton.icon(onPressed: (){
+                Navigator.pushNamed(context, '/location');
+              },
+                  icon: Icon(Icons.edit_location,color: Colors.grey,),
+                  label: Text('Edit location',style: TextStyle(
+                    color: Colors.white,
+                  ),),),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    data['location'],
+                    style: TextStyle(
+                      fontSize: 28,
+                      letterSpacing: 2,
+                      color: Colors.white,
+                    ),
+                  ),
+
+                ],
               ),
-            ),
-          ],
+              SizedBox(height: 20,),
+              Text(
+                data['time'],
+                style: TextStyle(
+                  fontSize: 66,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
         ),
       )),
     );
